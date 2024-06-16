@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer {
+    position: absolute; /* Position footer on top of the video */
+    bottom: 0; /* Align to the bottom */
+    left: 0;
+    right: 0; /* Span the entire width */
+    padding: 1rem; /* Add some padding */
+    font-size: xx-large;
+    color: whitesmoke; /* Text color */
+    text-align: center; /* Center the text */
+    /* Animation properties */
+    animation: slide 5s infinite linear;
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin */
+    /* Inherit animation from parent */
+    animation-inherit: inherit;
+  }
+  
+  /* Animation definition */
+  @keyframes slide {
+    from {
+      transform: translateX(100%); /* Start from the right */
+    }
+    to {
+      transform: translateX(-100%); /* Move to the left (off-screen) */
+    }
+  }
